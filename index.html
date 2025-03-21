@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DesiDeals - Elevate Your Everyday</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    
+    .card-img-top {
+      width: 100%; 
+      height: 200px; 
+      object-fit: cover; 
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="bg-primary text-white text-center py-3">
+    <h1>DesiDeals</h1>
+    <p>Elevate Your Everyday</p>
+  </header>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">DesiDeals</a>
+      <div class="ml-auto">
+        <a href="cart.html" class="btn btn-primary">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span class="badge badge-light" id="cartCount">0</span>
+        </a>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
+          <i class="fas fa-user"></i> Login
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container mt-4">
+    
+    <h2 class="mb-4">Clothing</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://apparelresources.com/wp-content/uploads/2013/10/In-line-Pressing-of-a-Formal-Jacket-and-Blazer.jpg" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Blazer</h5>
+            <p class="card-text">₹1499</p>
+            <button class="btn btn-primary" onclick="addToCart('Blazer', 1499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://t3.ftcdn.net/jpg/04/83/25/50/240_F_483255019_m1r1ujM8EOkr8PamCHF85tQ0rHG3Fiqz.jpg" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title">Jeans pants</h5>
+            <p class="card-text">₹990</p>
+            <button class="btn btn-primary" onclick="addToCart('Jeans Pants', 990)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://www.hancockfashion.com/cdn/shop/products/4_e1472ff0-a513-4712-ab89-610789cf1b96.jpg?v=1734413102" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Women Formal Shirt</h5>
+            <p class="card-text">₹399</p>
+            <button class="btn btn-primary" onclick="addToCart('Women Formal Shirt', 399)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://muselot.in/cdn/shop/products/A-winner-is-just-a-loser-who-tried-once-more-golden-yellow.jpg?v=1599683927&width=1445" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">T-Shirt</h5>
+            <p class="card-text">₹299</p>
+            <button class="btn btn-primary" onclick="addToCart('T-Shirt', 299)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <h2 class="mb-4">Footwear</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://t3.ftcdn.net/jpg/10/59/05/34/360_F_1059053407_8ibkaP24oD1ezvKVvCEM7OB5rM3tMjh6.jpg" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Sneakers</h5>
+            <p class="card-text">₹1599</p>
+            <button class="btn btn-primary" onclick="addToCart('Sneakers', 1599)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1440533039/photo/mens-black-loafers-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=kJsaSNsg9WaRvySDXZNWjPNxipmaRNvTAGn02XkQuUQ=" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title">Loafers</h5>
+            <p class="card-text">₹1099</p>
+            <button class="btn btn-primary" onclick="addToCart('Loafers', 1099)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-vector/women-s-shoes-with-heels-white-background-vector-drawing_384720-4835.jpg?w=360" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Heels</h5>
+            <p class="card-text">₹999</p>
+            <button class="btn btn-primary" onclick="addToCart('Heels', 999)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1336049414/photo/pair-of-flip-flop-on-white-background.jpg?s=612x612&w=0&k=20&c=6VjrHGl4AGoircOheyg394pRK3aB8uw-f3P7XE1mouI=" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Flip-flops</h5>
+            <p class="card-text">₹299</p>
+            <button class="btn btn-primary" onclick="addToCart('Flip-flops', 299)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+    <h2 class="mb-4">Accessories</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://www.iconicindia.com/cdn/shop/files/1_1_707fa63a-9f98-4d3f-a311-c9dadee4e9d1.jpg?v=1737627521" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Handbag</h5>
+            <p class="card-text">₹899</p>
+            <button class="btn btn-primary" onclick="addToCart('Handbag', 499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://asset.swarovski.com/images/$size_1000/t_swa103/b_rgb:ffffff,c_scale,dpr_auto,f_auto,w_auto/5632066_png/only-bracelet--white--rhodium-plated-swarovski-5632066.png" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title">Bracelet</h5>
+            <p class="card-text">₹199</p>
+            <button class="btn btn-primary" onclick="addToCart('Bracelet', 199)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/153817115/photo/sunglasses.jpg?s=612x612&w=0&k=20&c=k-Q3FcIdvcPNE9Nv6X9EYCBmNzNT0YZbKdfiSjfFEeo=" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Sunglasses</h5>
+            <p class="card-text">₹399</p>
+            <button class="btn btn-primary" onclick="addToCart('Sunglasses', 399)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://assets.ajio.com/medias/sys_master/root/20220720/nFy3/62d819eaf997dd03e2e3b540/-473Wx593H-450152504-black-MODEL.jpg" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Belt</h5>
+            <p class="card-text">₹499</p>
+            <button class="btn btn-primary" onclick="addToCart('Belt', 499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <h2 class="mb-4">Home Décor</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-photo/white-leather-sofa-white-background-isolated-3d-illustration_356060-3780.jpg" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Sofa</h5>
+            <p class="card-text">₹4499</p>
+            <button class="btn btn-primary" onclick="addToCart('Sofa', 4499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/108592339/photo/luxury-glass-chandelier.jpg?s=612x612&w=0&k=20&c=vkiPR-3s_WzzhwRHJq71KT4mLKOQ-bEgXglYBjXJK1Q=" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title">Chandelier</h5>
+            <p class="card-text">₹6599</p>
+            <button class="btn btn-primary" onclick="addToCart('Chandelier', 6599)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://hobbyindia.store/cdn/shop/products/Productimg4_2460c54f-6e58-484d-82a8-397f748d1850_1200x1200.jpg?v=1678950370" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Wall Clock</h5>
+            <p class="card-text">₹899</p>
+            <button class="btn btn-primary" onclick="addToCart('Wall Clock', 899)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-photo/minimalist-style-flower-vase-isolated-white-background-created-with-ai_641503-52970.jpg" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Vase</h5>
+            <p class="card-text">₹999</p>
+            <button class="btn btn-primary" onclick="addToCart('Vase', 999)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <h2 class="mb-4">Electronics</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUynBCgAuYtykrI1mVY6p74wBNP3O3M61cg&s" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Smartphone</h5>
+            <p class="card-text">₹4099</p>
+            <button class="btn btn-primary" onclick="addToCart('Smartphone', 4099)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1140541722/photo/modern-laptop-on-white-background.jpg?s=612x612&w=0&k=20&c=b9JtQ486gzDfgbpprd1hGTYoyzlnLcmOyHiRWajY1OU=" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title">Laptop</h5>
+            <p class="card-text">₹6599</p>
+            <button class="btn btn-primary" onclick="addToCart('Laptop', 6599)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/489937746/photo/microwave-stove-isolated.jpg?s=612x612&w=0&k=20&c=vUi8YaHdjDvVHJPXCcYHrWkELl1l8GLpGTg2hUl35V4=" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Microwave</h5>
+            <p class="card-text">₹5099</p>
+            <button class="btn btn-primary" onclick="addToCart('Microwave', 5099)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/2162431408/photo/sleek-blue-headphones-on-white-background.jpg?s=612x612&w=0&k=20&c=WyQ-bUslLSnirpxZ6zJNQnht7jnEtCz0bSkfasG1cSc=" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Headphones</h5>
+            <p class="card-text">₹2099</p>
+            <button class="btn btn-primary" onclick="addToCart('Headphones', 2099)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <h2 class="mb-4">Sports</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-photo/sport-football-sports-equipment-concept-close-up-soccer-ball-white-background-from-top_380164-150327.jpg" class="card-img-top" alt="Denim Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Football</h5>
+            <p class="card-text">₹1499</p>
+            <button class="btn btn-primary" onclick="addToCart('Football', 1499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://img.freepik.com/premium-photo/badminton-racket-white-background_52253-921.jpg" class="card-img-top" alt="Denim Shorts">
+          <div class="card-body">
+            <h5 class="card-title"> Badminton Racket</h5>
+            <p class="card-text">₹2199</p>
+            <button class="btn btn-primary" onclick="addToCart(' Badminton Racket', 2199)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1155199783/photo/mat-for-fitness-isolated-on-white-backgraund.jpg?s=612x612&w=0&k=20&c=ZMd5zKmCRtjPcBU7GQ-FRWiE8CXgGIzGWajQPUzQe1Y=" class="card-img-top" alt="Shirts">
+          <div class="card-body">
+            <h5 class="card-title">Yoga Mat</h5>
+            <p class="card-text">₹899</p>
+            <button class="btn btn-primary" onclick="addToCart('Yoga Mat', 899)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://yi-ai.s3.eu-central-1.amazonaws.com/prod/0/2/2024/01/08-0295756-659ba7e600d44.png" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Boxing Gloves</h5>
+            <p class="card-text">₹1699</p>
+            <button class="btn btn-primary" onclick="addToCart('Boxing Gloves', 1699)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+  
+  <footer class="bg-dark text-white text-center py-4 mt-4">
+    <p>&copy; 2023 DesiDeals. Made by an Indian.</p>
+    <p>Follow us on:
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+    
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const item = cart.find(i => i.name === name);
+
+      if (item) {
+        item.quantity += 1;
+      } else {
+        cart.push({ name: name, price: price, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(`${name} added to cart!`);
+    }
+
+    
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cartCount').textContent = cart.length;
+    }
+
+    
+    updateCartCount();
+  </script>
+</body>
+</html>
